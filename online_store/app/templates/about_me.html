@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Hello, my name is {{ first_name }} {{ last_name }}</h1>
+        <h1>My hobbies are: {{ hobbies }}</h1>
+        //<a href={{ url_for("user", name="TEST!") }}>CLICK</a>
+    </div>
+    <h4>Who are you and what do you like?</h4>
+    <form method="POST">
+        {{ wtf.quick_form(form) }}
+    </form>
+</div>
+{% endblock %}
